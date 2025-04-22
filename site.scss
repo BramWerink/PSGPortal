@@ -67,7 +67,7 @@ body.dark-mode {
 
 
 
-h1,h2,h3,h4,h5,h6,p,a,li{
+h1,h2,h3,h4,h5,h6,p,a,li,i{
   font-family: "Inter", sans-serif;
   color:var(--text);
 }
@@ -83,7 +83,7 @@ ul{
 }
 /* ------------------- product-card ------------------- */
 .product-card {
-    background:var(--contrast-0);
+    background:var(--bg-white);
     border: solid 1px var(--border);
     padding:2rem;
     border-radius:1rem;
@@ -125,7 +125,7 @@ ul{
         flex-wrap:nowrap;
 
         .card {
-            background: var(--contrast-1);
+            background: var(--bg-depth);
             gap: 1rem;
             padding: 1rem;
             font-size:0.8rem;
@@ -135,6 +135,7 @@ ul{
             i{
                 width:1rem;
                 aspect-ratio:1/1;
+                color:var(--text);
             }
         
         }
