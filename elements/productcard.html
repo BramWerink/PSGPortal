@@ -1,12 +1,5 @@
 <html>
-    <head>
-        <script src="https://kit.fontawesome.com/d528689916.js" crossorigin="anonymous"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="site.scss">
-
-    </head>
+    <head id="dynamic-head"></head>
     <body>
 
 
@@ -47,16 +40,18 @@
     </div>
 
         <div class="plugins hor">
-            <div class="plugin">😀</div>
-            <div class="plugin">😀</div>
-            <div class="plugin">😀</div>
-            <div class="plugin">😀</div>
-            <div class="plugin">😀</div>
-            <div class="plugin">😀</div>
-            <div class="plugin">😀</div>
-            <div class="plugin">😀</div>
-            <div class="plugin">😀</div>
-            <div class="plugin">😀</div>
+            <div class="plugin">⁂</div>
+            <div class="plugin">⁂</div>
+            <div class="plugin">⁂</div>
+            <div class="plugin">⁂</div>
+            <div class="plugin">⁂</div>
+            
+        </div>
+
+        <div class="price">
+            <p>30 dagen gratis</p>
+            <p>Daarna, € 10,00 / gebruiker / maand</p>
+
         </div>
 
 
@@ -65,6 +60,26 @@
             <button class="btn-secondary">Change version</button>
         </div>
    </div>
+   <script>
+    // Load the head content
+    fetch('../head.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('dynamic-head').innerHTML = data;
+        });
+
+    // Load the dark mode script
+    fetch('../darkmode.js')
+        .then(response => response.text())
+        .then(data => {
+            const script = document.createElement('script');
+            script.text = data;
+            script.defer = true;  // Ensure the script runs after the document is loaded
+            document.body.appendChild(script);
+        });
+</script>
+
+
 
 </body>
 </html>

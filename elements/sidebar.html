@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <script src="https://kit.fontawesome.com/d528689916.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/site.scss">
+
+    </head>
+<body>
+<div class="sidebar">
+    <div class="top">
+        <div class="profile">
+            <div class="profile-circle"></div>
+        <h2>Timmertijd</h2>
+        </div>
+        
+        <p class="actions" id="dark-mode-toggle">
+           Lichte modus
+        </p>
+    </div>
+    <ul class="menu">
+        <li class="active">
+            <div class="btn-small">
+                <i class="fa-solid fa-home"></i>
+            </div>
+            <p>Home</p>
+        </li>
+
+        <li>
+            <div class="btn-small">
+                <i class="fa-solid fa-box"></i>
+            </div>
+            <p>Applicaties & gebruikers</p>
+        </li>
+
+        <li>
+            <div class="btn-small">
+                <i class="fa-solid fa-file-alt"></i>
+            </div>
+            <p>Facturen & licenties</p>
+        </li>
+
+        <li>
+            <div class="btn-small">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <p>User</p>
+        </li>
+    </ul>
+    <ul class="menu bottom">
+        <li>
+            <div class="btn-small">
+                <i class="fa-solid fa-walking"></i>
+            </div>
+            <p>Uitloggen</p>
+        </li>
+
+    </ul>
+</div>
+
+<script>
+    // Load the head content
+    fetch('../head.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('dynamic-head').innerHTML = data;
+        });
+
+    // Load the dark mode script
+    fetch('../darkmode.js')
+        .then(response => response.text())
+        .then(data => {
+            const script = document.createElement('script');
+            script.text = data;
+            script.defer = true;  // Ensure the script runs after the document is loaded
+            document.body.appendChild(script);
+        });
+</script>
+
+</body>
+</html>

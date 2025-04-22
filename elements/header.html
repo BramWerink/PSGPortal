@@ -4,7 +4,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="site.scss">
+        <link rel="stylesheet" href="/site.scss">
 
     </head>
     <body>
@@ -12,5 +12,24 @@
     <h1>Pagina titel</h1>
     <i class="fa-solid fa-chevron-down"></i>
 </div>
+<script>
+    // Load the head content
+    fetch('../head.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('dynamic-head').innerHTML = data;
+        });
+
+    // Load the dark mode script
+    fetch('../darkmode.js')
+        .then(response => response.text())
+        .then(data => {
+            const script = document.createElement('script');
+            script.text = data;
+            script.defer = true;  // Ensure the script runs after the document is loaded
+            document.body.appendChild(script);
+        });
+</script>
+
 </body>
 </html>
