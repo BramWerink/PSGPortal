@@ -163,8 +163,24 @@ p{
     gap:1rem;
     flex-wrap:wrap;
     justify-content:space-between;
+    display: flex;
 
     button{
         flex:1;
+    }
+}
+
+/* ------------------- HEADER ------------------- */
+.header{
+    padding: 1rem;
+    border-bottom: solid 1px var(--border);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+
+    i{
+        font-size: 1.25rem;
     }
 }
