@@ -30,6 +30,8 @@
     --main: var(--blue-5);
     --main-hover: var(--blue-6);
     --main-hover-light: var(--blue-1);
+
+    --disabled-text:var(--contrast-3)
 }
 
 h1,h2,h3,h4,h5,h6,p,a,li{
@@ -38,13 +40,14 @@ h1,h2,h3,h4,h5,h6,p,a,li{
 
 p{
 margin: 0;
+line-height: 175%;
 }
 
 ul{
     padding: 0;
     list-style: none;
 }
-
+/* ------------------- product-card ------------------- */
 .product-card {
     background:var(--contrast-0);
     border: solid 1px var(--border);
@@ -129,7 +132,20 @@ ul{
         .plugin {
             background: var(--blue-0);
             border-radius:.5rem;
+            width: 2rem;
+            aspect-ratio: 1/1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
+    }
+
+    .price{
+        p:nth-of-type(2){
+            color: var(--disabled-text);
+        }
+
+        
     }
 }
 
