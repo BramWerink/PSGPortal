@@ -18,7 +18,7 @@ function toggleDarkMode() {
     localStorage.setItem('darkMode', isDarkMode);
 
     // Optionally, change the button text
-    darkModeButton.textContent = isDarkMode ? "Lighte modus" : "Donkere modus";
+    darkModeButton.textContent = isDarkMode ? "Lichte modus" : "Donkere modus";
 }
 
 // Initialize dark mode based on user preference stored in localStorage
