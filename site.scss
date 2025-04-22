@@ -10,7 +10,7 @@
     --blue-7: #0F49A5;
     --blue-8: #0B397F;
     --blue-9: #082958;
-    --blue-10:#041B36;
+    --blue-10: #041B36;
 
     /* Contrasts */
     --contrast-0: #FFFFFF;
@@ -26,16 +26,50 @@
     --contrast-10: #000000;
     --border: var(--contrast-2);
     --cloudy: #fafafa;
+
     /* Mains */
     --main: var(--blue-5);
     --main-hover: var(--blue-6);
-    --main-hover-light: var(--blue-1);
+    --main-hover-light: var(--blue-0);
 
-    --disabled-text:var(--contrast-3)
+
+    --bg-white: var(--contrast-0);
+    --bg-cloudy: var(--cloudy);
+    --bg-depth: var(--contrast-1);
+
+    --text:var(--contrast-8);
+    --disabled-text: var(--contrast-3);
+
 }
+
+body {
+    background: var(--bg-cloudy);
+    color: var(--contrast-10);
+}
+
+/* Dark Mode: when the dark-mode class is added */
+body.dark-mode {
+    
+
+    --main: var(--blue-5);
+    --main-hover: var(--blue-6);
+    --main-hover-light: var(--blue-6);
+
+    --bg-white: #2E2F33;
+    --bg-cloudy: #222326;
+    --bg-depth: #393B40;
+
+    --text:var(--contrast-0);
+    --disabled-text: var(--contrast-3);
+
+    --border:var(--contrast-7);
+}
+
+
 
 h1,h2,h3,h4,h5,h6,p,a,li{
   font-family: "Inter", sans-serif;
+  color:var(--text);
 }
 
 p{
@@ -217,11 +251,11 @@ ul{
 
 /* ------------------- SIDEBAR ------------------- */
 .sidebar{
-    background: var(--cloudy);
+    background: var(--bg-white);
     border-right: solid 1px var(--border);
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     position: sticky;
     top: 0;
     height: 100vh;
@@ -230,12 +264,26 @@ ul{
     .top{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
+        padding: 0 1rem;
         .actions{
             display: flex;
             flex-direction: row;
             gap: 1rem;
+        }
+        .profile{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
+
+            .profile-circle{
+                width: 2rem;
+                aspect-ratio: 1/1;
+                border-radius: 50%;
+                background: var(--blue-0);
+            }
         }
     }
 
@@ -251,11 +299,14 @@ ul{
             flex-direction: row;
             align-items: center;
             padding: 1rem;
-            background: var(--blue-0);
             border-radius: 1rem;
             transition: all 100ms ease;
 
             &:hover{
+                background-color: var(--main-hover-light);
+            }
+
+            &.active{
                 background-color: var(--main-hover-light);
             }
         }
@@ -264,4 +315,6 @@ ul{
         height: auto;
         }
     }
+
+    
 }
