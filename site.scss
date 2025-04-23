@@ -29,8 +29,20 @@
 
     /* Mains */
     --main: var(--blue-5);
-    --main-hover: var(--blue-6);
+    --main-hover: var(--blue-4);
+    --main-pressed:var(--blue-3);
+    --disabled:var(--contrast-2);
+    --disabled-text:var(--contrast-3);
+    --main-light:var(--contrast-0);
+    --hover-light:var(var(--blue-0))
     --main-hover-light: var(--blue-0);
+    --main-pressed-light: var(--blue-2);
+    --selected-light: var(--hover-light);
+    --input-color:var(--bg-cloudy);
+    --main-text:var(--contrast-0);
+    --main-text-light:var(--main);
+    --placeholder:var(--contrast-3);
+
 
 
     --bg-white: var(--contrast-0);
@@ -38,8 +50,7 @@
     --bg-depth: var(--contrast-1);
 
     --text:var(--contrast-8);
-    --disabled-text: var(--contrast-3);
-
+    --text-light:var(--contrast-2);
 }
 
 body {
