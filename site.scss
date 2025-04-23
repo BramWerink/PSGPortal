@@ -29,8 +29,20 @@
 
     /* Mains */
     --main: var(--blue-5);
-    --main-hover: var(--blue-6);
+    --main-hover: var(--blue-4);
+    --main-pressed:var(--blue-3);
+    --disabled:var(--contrast-2);
+    --disabled-text:var(--contrast-3);
+    --main-light:var(--contrast-0);
+    --hover-light:var(--blue-0);
     --main-hover-light: var(--blue-0);
+    --main-pressed-light: var(--blue-2);
+    --selected-light: var(--hover-light);
+    --input-color:var(--bg-cloudy);
+    --main-text:var(--contrast-0);
+    --main-text-light:var(--main);
+    --placeholder:var(--contrast-3);
+
 
 
     --bg-white: var(--contrast-0);
@@ -38,8 +50,7 @@
     --bg-depth: var(--contrast-1);
 
     --text:var(--contrast-8);
-    --disabled-text: var(--contrast-3);
-
+    --text-light:var(--contrast-2);
 }
 
 body {
@@ -65,9 +76,9 @@ body.dark-mode {
     --border:var(--contrast-7);
 }
 
+/* ------------------- Global Styles ------------------- */
 
-
-h1,h2,h3,h4,h5,h6,p,a,li,i{
+h1,h2,h3,h4,h5,h6,p,a,li,i,button{
   font-family: "Inter", sans-serif;
   color:var(--text);
 }
@@ -81,6 +92,83 @@ ul{
     padding: 0;
     list-style: none;
 }
+
+/* ------------------- Buttons ------------------- */
+.button-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    
+        button{
+            flex:1;
+        };
+    }
+    
+    .btn{
+        border-radius: .5rem;
+        padding: 1rem 2rem;
+        transition: all 200ms ease;
+        font-weight: 600;
+        border: none;
+        max-width: 20rem;
+    }
+    .primary{
+        background:var(--main);
+        color:var(--main-text);
+        border:none;
+        transition:all 200ms ease;
+        &:hover{
+            background: var(--main-hover);
+            box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.08);
+        }
+    
+        &:active{
+            background: var(--main-pressed);
+            box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.08);
+        }
+    }
+    
+    .secondary{
+        background:var(--main-light);
+        color:var(--main-text-light);
+        border:1px solid var(--main);
+        transition:all 200ms ease;
+    
+        &:hover {
+            background:var(--main-hover-light);
+            color:var(--main);
+        }
+    
+        &:active{
+            background: var(--main-pressed-light);
+            color:var(--main);
+        }
+    }
+    
+    .tertiary{
+        background:var(--bg-white);
+        color:var(--main);
+        transition:all 200ms ease;
+    
+        &:hover {
+            background:var(--main-hover-light);
+            color:var(--main);
+        }
+    
+        &:active{
+            background: var(--main-pressed-light);
+            color:var(--main);
+        }
+    }
+    
+    .btn-small{
+        width: 3rem;
+        aspect-ratio: 1/1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 /* ------------------- product-card ------------------- */
 .product-card {
     background:var(--bg-white);
@@ -185,56 +273,6 @@ ul{
 }
 
 
-.btn-primary{
-    background:var(--main);
-    border-radius:.5rem;
-    padding:1rem 2rem;
-    color:var(--contrast-0);
-    border:none;
-    transition:all 200ms ease;
-    &:hover{
-        background: var(--main-hover);
-        box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.08);
-    }
-}
-
-
-
-.btn-secondary{
-    background:var(--contrast-0);
-    border-radius:.5rem;
-    padding:1rem 2rem;
-    color:var(--main);
-    border:1px solid var(--main);
-    transition:all 200ms ease;
-
-    &:hover {
-        background:var(--blue-0);
-        color:var(--main);
-        border:solid 1px var(--main);
-    }
-}
-
-.btn-small{
-    width: 3rem;
-    aspect-ratio: 1/1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.row.button-row{
-    gap:1rem;
-    flex-wrap:wrap;
-    justify-content:space-between;
-    display: flex;
-
-    button{
-        flex:1;
-    }
-}
-
 /* ------------------- HEADER ------------------- */
 .header{
     padding: 1rem;
@@ -316,6 +354,5 @@ ul{
         height: auto;
         }
     }
-
-    
 }
+
