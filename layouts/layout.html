@@ -1,0 +1,27 @@
+<html>
+<head id="dynamic-head"></head>
+<body>
+<div class="layout-default">
+    <div class="sidebar"></div>
+    <div class="layout-content">
+        <div class="container">
+            
+        </div>
+    </div>
+</div>
+    
+
+<script>
+    fetch('../head.html').then(r => r.text()).then(t => document.getElementById('dynamic-head').innerHTML = t);
+    document.body.appendChild(Object.assign(document.createElement('script'), { src: '../darkmode.js', defer: true }));
+
+   // Load sidebar.html into .layout-default
+   fetch('../elements/sidebar.html')
+        .then(r => r.text())
+        .then(t => document.querySelector('.sidebar').innerHTML = t);
+
+        
+</script>
+
+</body>
+</html>

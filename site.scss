@@ -234,11 +234,13 @@ a.hyperlink{
             font-size:0.8rem;
             flex-wrap:nowrap;
             width:auto;
+            border-radius: .5rem;
+            border: solid 1px var(--border);
 
             i{
                 width:1rem;
                 aspect-ratio:1/1;
-                color:var(--text);
+                color: var(--text);
             }
         
         }
@@ -560,5 +562,28 @@ input[type="radio"]{
 
     h2,p{
         margin: 0;
+    }
+}
+
+/* ------ layout ------- */
+
+.layout-default{
+    display: flex;
+    flex-direction: row;
+
+    .layout-content{
+        background: var(--bg-cloudy);
+        width: 100%;
+        padding: 0 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .container{
+            width: 100%;
+            max-width: 1400px;
+            background: var(--main-light);
+            height: 100%;
+        }
     }
 }
