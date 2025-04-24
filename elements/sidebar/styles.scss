@@ -1,0 +1,123 @@
+.sidebar{
+    background: var(--bg-white);
+    border-right: solid 1px var(--border);
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 20rem;
+    max-width: 50vw;
+
+
+    &.closed{
+        width: 5rem;
+        
+
+        .top{
+            .profile{
+                width: 100%;
+                justify-content: center;
+            }
+            h2{
+                display: none;
+            }
+
+            p.actions{
+                display: none
+            }
+        }
+        ul.menu{
+            padding: 0 1rem;
+            li{
+                justify-content: center;
+                width: 3rem;
+                aspect-ratio: 1/1;
+                padding: 0;
+                p{
+                    display: none;
+                }
+            } 
+        }
+    }
+
+    .open-button{
+        border-radius: 100%;
+        width: 2rem;
+        aspect-ratio: 1/1;
+        background: var(--bg-white);
+        border: solid 1px var(--border);
+        position: absolute;
+        right: -1rem;
+        top: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .top{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        .actions{
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+        }
+        .profile{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
+            width: 100%;
+
+            .profile-circle{
+                width: 2rem;
+                aspect-ratio: 1/1;
+                border-radius: 50%;
+                background: var(--blue-0);
+            }
+        }
+    }
+
+    ul.menu{
+        gap: .5rem;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        position: relative;
+        padding: 0 1rem;
+        hr{
+            width: 80%;
+            border: solid 1px var(--border);
+        }
+        li{
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            align-items: center;
+            border-radius: 1rem;
+            transition: all 100ms ease;
+            padding: 1rem;
+
+            .btn-small{
+                width: 1rem;
+                aspect-ratio: 1/1;
+            }
+
+            &:hover{
+                background-color: var(--main-hover-light);
+            }
+
+            &.active{
+                background-color: var(--main-hover-light);
+            }
+        }
+
+        &.bottom{
+        height: auto;
+        }
+    }
+}
