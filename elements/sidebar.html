@@ -9,15 +9,18 @@
     </head>
 <body>
 <div class="sidebar">
+    <div class="open-button">
+        <i class="fa-solid fa-bars"></i>
+    </div>
     <div class="top">
         <div class="profile">
             <div class="profile-circle"></div>
-        <h2>Timmertijd</h2>
+            <h2>Bart Bouw</h2>
         </div>
         
-        <p class="actions" id="dark-mode-toggle">
+        <!-- <p class="actions" id="dark-mode-toggle">
            Lichte modus
-        </p>
+        </p> -->
     </div>
     <ul class="menu">
         <li class="active">
@@ -40,12 +43,20 @@
             </div>
             <p>Facturen & licenties</p>
         </li>
+        <hr>
 
         <li>
             <div class="btn-small">
                 <i class="fa-solid fa-user"></i>
             </div>
-            <p>User</p>
+            <p>Profiel</p>
+        </li>
+
+        <li>
+            <div class="btn-small">
+                <i class="fa-solid fa-building"></i>
+            </div>
+            <p>Bedrijf</p>
         </li>
     </ul>
     <ul class="menu bottom">
@@ -76,6 +87,16 @@
             script.defer = true;  // Ensure the script runs after the document is loaded
             document.body.appendChild(script);
         });
+
+        // Opening and closing sidebars
+        document.addEventListener('DOMContentLoaded', function () {
+        const sidebar = document.querySelector('.sidebar');
+        const toggleButton = document.querySelector('.open-button');
+
+        toggleButton.addEventListener('click', () => {
+            sidebar.classList.toggle('closed');
+        });
+    });
 </script>
 
 </body>

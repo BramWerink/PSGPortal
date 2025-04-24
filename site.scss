@@ -24,7 +24,7 @@
     --contrast-8: #333333;
     --contrast-9: #1A1A1A;
     --contrast-10: #000000;
-    --border: var(--contrast-2);
+    --border: var(--contrast-1);
     --cloudy: #fafafa;
 
     /* Mains */
@@ -278,7 +278,7 @@ a.hyperlink{
 
     .price{
         p:nth-of-type(2){
-            color: var(--disabled-text);
+            color: var(--text-light);
         }
 
         
@@ -307,18 +307,64 @@ a.hyperlink{
     border-right: solid 1px var(--border);
     display: flex;
     flex-direction: column;
-    gap: 1rem;
     position: sticky;
     top: 0;
     height: 100vh;
-    width: 400px;
+    width: 20rem;
+    max-width: 50vw;
+
+
+    &.closed{
+        width: 5rem;
+        
+
+        .top{
+            .profile{
+                width: 100%;
+                justify-content: center;
+            }
+            h2{
+                display: none;
+            }
+
+            p.actions{
+                display: none
+            }
+        }
+        ul.menu{
+            padding: 0 1rem;
+            li{
+                justify-content: center;
+                width: 3rem;
+                aspect-ratio: 1/1;
+                padding: 0;
+                p{
+                    display: none;
+                }
+            } 
+        }
+    }
+
+    .open-button{
+        border-radius: 100%;
+        width: 2rem;
+        aspect-ratio: 1/1;
+        background: var(--bg-white);
+        border: solid 1px var(--border);
+        position: absolute;
+        right: -1rem;
+        top: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     .top{
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        padding: 0 1rem;
+        padding: 1rem;
         .actions{
             display: flex;
             flex-direction: row;
@@ -329,6 +375,7 @@ a.hyperlink{
             flex-direction: row;
             align-items: center;
             gap: 1rem;
+            width: 100%;
 
             .profile-circle{
                 width: 2rem;
@@ -346,13 +393,23 @@ a.hyperlink{
         height: 100%;
         position: relative;
         padding: 0 1rem;
+        hr{
+            width: 80%;
+            border: solid 1px var(--border);
+        }
         li{
             display: flex;
             flex-direction: row;
+            gap: 1rem;
             align-items: center;
-            padding: 1rem;
             border-radius: 1rem;
             transition: all 100ms ease;
+            padding: 1rem;
+
+            .btn-small{
+                width: 1rem;
+                aspect-ratio: 1/1;
+            }
 
             &:hover{
                 background-color: var(--main-hover-light);
@@ -462,4 +519,13 @@ input[type="checkbox"]{
     border: solid 1px var(--border);
     overflow: hidden;
 
+}
+
+input[type="radio"]{
+    width: 2rem;
+    aspect-ratio: 1/1;
+    background: var(--input-color);
+    border-radius: .5rem;
+    border: solid 1px var(--border);
+    overflow: hidden;
 }
