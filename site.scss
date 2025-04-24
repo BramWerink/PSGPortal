@@ -27,6 +27,27 @@
     --border: var(--contrast-1);
     --cloudy: #fafafa;
 
+    /* Colours */
+    /* Green */
+    --green-5:#37B144;
+    --green-0:#E6F8E9;
+
+    --red-5:#E23636;
+    --red-0:#FFF5F5;
+
+    /* Statuses */
+    --success:var(--green-5);
+    --success-bg:var(--green-0);
+
+    --destructive:var(--red-5);
+    --destructive-bg:var(--red-0);
+
+    --warning:var(--yellow-5);
+    --warning-bg:var(--yellow-0);
+
+    --premium: var(--yellow-5);
+    --premium-bg: var(--yellow-0);
+
     /* Mains */
     --main: var(--blue-5);
     --main-hover: var(--blue-4);
@@ -81,6 +102,7 @@ body.dark-mode {
 h1,h2,h3,h4,h5,h6,p,a,li,i,button,label{
   font-family: "Inter", sans-serif;
   color:var(--text);
+  margin: 0;
 }
 
 p{
