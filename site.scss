@@ -174,7 +174,7 @@ a.hyperlink{
             color:var(--main);
         }
     }
-    
+
     .btn-small{
         width: 3rem;
         aspect-ratio: 1/1;
@@ -182,6 +182,8 @@ a.hyperlink{
         justify-content: center;
         align-items: center;
     }
+    
+    
 /* ------------------- product-card ------------------- */
 .product-card {
     background:var(--bg-white);
@@ -528,4 +530,35 @@ input[type="radio"]{
     border-radius: .5rem;
     border: solid 1px var(--border);
     overflow: hidden;
+}
+
+/* ------------------- Modal ------------------- */
+
+.modal{
+    border-radius: 1rem;
+    padding: 2rem;
+    background:var(--bg-white);
+    border: solid 1px var(--border);
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.08);
+    max-width: 50rem;
+    position: relative;
+
+    .button-row{
+        justify-content: end;
+    }
+
+    .btn-small{
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    
+    .content{
+        margin-bottom: 2rem;
+    }
+    
+
+    h2,p{
+        margin: 0;
+    }
 }
