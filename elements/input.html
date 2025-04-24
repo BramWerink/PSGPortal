@@ -8,12 +8,18 @@
 
     </head>
 <body>
-<div class="button-row">
-        <button class="btn primary">First button</button>
-        <button class="btn secondary">Second button</button>
-        <button class="btn tertiary">Third button</button>
+<div class="text-input">
+    <label for="input-id" class="label">Label</label>
+    <input type="text" placeholder="Placeholder" value="Value" id="input-id" name="input-name" required>
 </div>
-    
+<label class="switch">
+    <input type="checkbox">
+    <span class="slider round"></span>
+</label>
+
+<input type="checkbox">
+
+<input type="radio" name="radio-group" id="radio1" value="option1">
 
 <script>
     fetch('../head.html').then(r => r.text()).then(t => document.getElementById('dynamic-head').innerHTML = t);

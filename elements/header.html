@@ -13,22 +13,8 @@
     <i class="fa-solid fa-chevron-down"></i>
 </div>
 <script>
-    // Load the head content
-    fetch('../head.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('dynamic-head').innerHTML = data;
-        });
-
-    // Load the dark mode script
-    fetch('../darkmode.js')
-        .then(response => response.text())
-        .then(data => {
-            const script = document.createElement('script');
-            script.text = data;
-            script.defer = true;  // Ensure the script runs after the document is loaded
-            document.body.appendChild(script);
-        });
+    fetch('../head.html').then(r => r.text()).then(t => document.getElementById('dynamic-head').innerHTML = t);
+    document.body.appendChild(Object.assign(document.createElement('script'), { src: '../darkmode.js', defer: true }));
 </script>
 
 </body>
