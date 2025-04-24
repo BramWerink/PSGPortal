@@ -42,15 +42,17 @@
 
         .card {
             background: var(--bg-depth);
-            gap: 1rem;
+            gap: .5rem;
             padding: 1rem;
             font-size:0.8rem;
             flex-wrap:nowrap;
+            display: flex;
+            align-items: center;
             width:auto;
+            border-radius: .5rem;
 
             i{
-                width:1rem;
-                aspect-ratio:1/1;
+                
                 color:var(--text);
             }
         
