@@ -18,10 +18,16 @@
             .profile{
                 width: 100%;
                 justify-content: center;
+
+                p.profile-name{
+                    display: none;
+                }
+
+                i{
+                    display: none;
+                }
             }
-            h2{
-                display: none;
-            }
+           
 
             p.actions{
                 display: none
@@ -72,6 +78,10 @@
             align-items: center;
             gap: 1rem;
             width: 100%;
+
+            p.profile-name{
+                font-size: 1rem;
+            }
 
             .profile-circle{
                 width: 2rem;
