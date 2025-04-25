@@ -198,3 +198,45 @@ ul{
     }
     
     
+    body{
+        position: relative;
+    }
+    
+    .lateral-container{
+        width: 400px;
+        padding: 2rem;
+        height: 100%;
+        position: relative;
+    
+        .lateral{
+            background:var(--bg-white);
+            border-radius: 1rem;
+            border: solid 1px var(--border);
+            padding: 2rem;
+            height: 100%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+    
+            .top{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+    
+                .status{
+                    background:var(--success-bg);
+                    color:var(--success);
+                    padding: 1rem;
+                    border-radius: 1rem;
+                    font-weight: 600;
+                }
+            }
+    
+            .content{
+               
+                flex: 1;
+            }
+        }
+    
+    }

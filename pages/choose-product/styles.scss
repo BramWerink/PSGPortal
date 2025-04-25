@@ -1,0 +1,37 @@
+.choose-product{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: top;
+    align-items: center;
+
+    >div{
+        height: 100%;
+    }
+
+    .choose{
+        flex: 1;
+        background: var(--bg-cloudy);
+        display: flex;
+        justify-content: center;
+        padding-top: 2rem;
+
+        .container{
+           width: 100%;
+           max-width: 1400px;
+           display: grid;
+           grid-template-columns: repeat(4, 1fr);
+           gap: 1rem;
+
+           .application{
+            background: white;
+            border: solid 1px var(--border);
+            border-radius: 1rem;
+            height: auto;
+           }
+
+        }
+    }
+
+   
+}
