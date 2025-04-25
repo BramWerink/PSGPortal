@@ -1,0 +1,20 @@
+.layout-default{
+    display: flex;
+    flex-direction: row;
+
+    .layout-content{
+        background: var(--bg-cloudy);
+        width: 100%;
+        padding: 0 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .container{
+            width: 100%;
+            max-width: 1400px;
+            background: var(--main-light);
+            height: 100%;
+        }
+    }
+}
