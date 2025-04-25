@@ -1,0 +1,12 @@
+a.hyperlink{
+    color: var(--main);
+    border-bottom:1rem;
+    transition: all 200ms ease;
+    padding: 0 .25rem;
+
+    &:hover{
+        color: var(--main-hover);
+        text-decoration: underline;
+        background: var(--main-hover-light);
+    }
+}

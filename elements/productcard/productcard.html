@@ -1,5 +1,12 @@
 <html>
-<head id="dynamic-head"></head>
+    <head>
+        <script src="https://kit.fontawesome.com/d528689916.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../../site.scss">
+        <link rel="stylesheet" href="styles.scss">
+    </head>
     <body>
 
 
@@ -60,12 +67,6 @@
             <button class="btn secondary">Change version</button>
         </div>
    </div>
-   <script>
-    fetch('../head.html').then(r => r.text()).then(t => document.getElementById('dynamic-head').innerHTML = t);
-    document.body.appendChild(Object.assign(document.createElement('script'), { src: '../darkmode.js', defer: true }));
-</script>
-
-
 
 </body>
 </html>

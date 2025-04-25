@@ -1,0 +1,13 @@
+.header{
+    padding: 1rem;
+    border-bottom: solid 1px var(--border);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+
+    i{
+        font-size: 1.25rem;
+    }
+}
